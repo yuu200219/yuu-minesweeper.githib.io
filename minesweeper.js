@@ -2,7 +2,7 @@
 //switch button: reveal/flag
 // check win/lose
 export const BOARD_SIZE_WIDTH = 10
-export const BOARD_SIZE_HEIGHT = 15
+export const BOARD_SIZE_HEIGHT = 10
 export const NUMBER_OF_MINES = 20
 
 export const GAME_STATUS = {
