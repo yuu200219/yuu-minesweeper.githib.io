@@ -16,6 +16,11 @@ const boardElement = document.querySelector('.board')
 const mineLeftText = document.querySelector('[data-mine-count]')
 const mainTitle = document.querySelector('.main-title')
 const optElement = document.querySelector('.option')
+const restart = document.getElementById('restart')
+
+restart.addEventListener("click", () => {
+    window.location.reload();
+})
 
 mainTitle.textContent = "Minesweeper"
 

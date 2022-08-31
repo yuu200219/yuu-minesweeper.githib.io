@@ -2,11 +2,28 @@
     box-sizing: border-box;
 }
 body {
+    margin-bottom: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background-color: rgb(30, 30, 30);
+}
+.restart-icon {
+    height: 20px;
+}
+#restart {
+    padding: 8px;
+    border-radius: 50px;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    transition: 0.2s;
+}
+#restart:hover {
+    background-color: rgb(81, 81, 81);
+    cursor: pointer;
 }
 .title {
     color: white;
@@ -58,11 +75,12 @@ body {
 .subtext {
     font-size: 20px;
     text-align: center;
+    margin-bottom: 10px;
 }
 .board {
     display: grid;
     padding: 10px;
-    margin-bottom: 100px;
+    margin-bottom: 5px;
     margin-left: 100px;
     margin-right: 100px;
     grid-template-columns: repeat(var(--size_x), 25px);
