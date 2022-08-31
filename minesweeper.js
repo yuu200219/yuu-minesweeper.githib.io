@@ -127,7 +127,7 @@ export function flagedTile(tile) {
 }
 
 export function revealTile(board, tile) {
-    console.log(tile)
+    // console.log(tile)
     if(tile.status !== TILE_STATUS.HIDDEN) {
         // console.log("return")
         return
@@ -144,7 +144,7 @@ export function revealTile(board, tile) {
         adjacentTiles.forEach(revealTile.bind(null, board))
     }
     else {
-        console.log(mines.length)
+        // console.log(mines.length)
         tile.element.textContent = mines.length
     }
     // console.log(adjacentTiles)
