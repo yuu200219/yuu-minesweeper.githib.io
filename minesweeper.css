@@ -135,6 +135,10 @@ body {
     border-radius: 5px;
     transition: 0.2s;
 }
+.board > [data-status="flag"]:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
 .option {
     position: fixed;
     bottom: 20px;
