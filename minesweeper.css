@@ -139,6 +139,11 @@ body {
     opacity: 0.5;
     cursor: pointer;
 }
+.timer {
+    margin-top: 10px;
+    color: white;
+    font-family: Inconsolata;
+}
 .option {
     position: fixed;
     bottom: 20px;

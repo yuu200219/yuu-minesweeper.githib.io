@@ -4,6 +4,8 @@ import { createBoard, flagedTile, Option, OptionSwitch, OPTION_STATUS, TILE_STAT
     checkWin, checkLose,
     GAME_STATUS,
     BOARD_SIZE_WIDTH, BOARD_SIZE_HEIGHT, NUMBER_OF_MINES} from "./minesweeper.js";
+import {timer} from "./timer.js";
+
 
 // const levelElement = document.querySelector('.level')
 // Level(levelElement)
@@ -143,6 +145,7 @@ function checkGameEnd(board, tile) {
         mainTitle.textContent = "You Win!"
     }
     if(win || lose) {
+        clearInterval(timer)
         boardElement.addEventListener('click', stopProp, {capture: true})
     }
 }
