@@ -4,7 +4,7 @@ import { createBoard, flagedTile, Option, OptionSwitch, OPTION_STATUS, TILE_STAT
     checkWin, checkLose,
     GAME_STATUS,
     BOARD_SIZE_WIDTH, BOARD_SIZE_HEIGHT, NUMBER_OF_MINES} from "./minesweeper.js";
-import {timer} from "./timer.js";
+// import {timer} from "./timer.js";
 
 
 // const levelElement = document.querySelector('.level')
@@ -88,11 +88,29 @@ optElement.addEventListener("click", () => {
 //         })
 //     })
 // }
+var sec = 0;
+function pad(val) {
+    return val > 9 ? val : "0" + val;
+}
 
+const Minutes = document.getElementById('minutes');
+const Seconds = document.getElementById('seconds');
+var timer;
+Minutes.textContent = "00";
+Seconds.textContent = "00";
+
+var firstTimeClick = false;
 board.forEach(row => {
     row.forEach(tile => {
         boardElement.append(tile.element)
         tile.element.addEventListener("click", () => {
+            if(firstTimeClick == false) {
+                timer = setInterval( function() {
+                    Seconds.innerHTML = pad(++sec%60);
+                    Minutes.innerHTML = pad(parseInt(sec/60, 10));
+                }, 1000);
+                firstTimeClick = true;
+            }
             if(optElement.dataset.opt === OPTION_STATUS.FLAG) {
                 flagedTile(tile)
                 listMineLeft()
