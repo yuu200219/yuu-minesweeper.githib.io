@@ -7,7 +7,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 0;
+    /* margin: 0; */
     background-color: rgb(30, 30, 30);
 }
 .restart-icon {
@@ -34,8 +34,8 @@ body {
     color: white;
     font-size: 50px;
     text-align: center;
+    margin-top: 30px;
     margin-bottom: 0;
-    margin: 0;
     transition: 1s;
 }
 .main-title[data-game="lose"] {
