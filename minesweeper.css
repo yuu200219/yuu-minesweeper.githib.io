@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body {
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,11 +76,6 @@ body {
     font-size: 20px;
     text-align: center;
     margin-bottom: 10px;
-}
-.gaming-container {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
 }
 .board {
     display: grid;
